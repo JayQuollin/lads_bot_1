@@ -8,7 +8,7 @@ handlers_router = Router()
 
 @handlers_router.message(Command(commands=["start"]))
 async def start_handler(message: Message):
-    await message.answer(text="Привет. \nЯ - Джеймс Стетхем. \nЯ объясню тебе, как правильно общаться в интернете.")
+    await message.answer(text="Привет. \nЯ - Джеймс Стетхем. \nЯ подберу тебе правильную цитату.")
 
 
 @handlers_router.message()

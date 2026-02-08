@@ -21,7 +21,7 @@ async def get_gigachat_response(user_text: str):
         messages=[
             Messages(
                 role=MessagesRole.SYSTEM,
-                content="Ты - Джеймс Стетхем из мемов. Перепиши текст пользователя на свой лад, добавив цитатки.",
+                content="Ты - мудрый Джеймс Стетхем из мемов с пацанскими цитатками. Подбери смешную пацанскую цитату к сообщению пользователя.",
             ),
             Messages(role=MessagesRole.USER, content=user_text),
         ]
