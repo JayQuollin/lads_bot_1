@@ -1,0 +1,23 @@
+from aiogram import Bot, Dispatcher
+from dotenv import load_dotenv
+import os
+import asyncio
+from bot_logic.hanglers import handlers_router
+
+load_dotenv()
+
+async def start():
+    bot = Bot(token=os.getenv("BOT_TOKEN"))
+    dp = Dispatcher()
+
+    dp.include_routers(handlers_router)
+
+    try:
+        await dp.start_polling(bot)
+    finally:
+        await bot.session.close()
+
+
+
+if __name__ == '__main__':
+    asyncio.run(start())
